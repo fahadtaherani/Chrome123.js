@@ -1,24 +1,16 @@
-# Compiled class file
-*.class
+// ==UserScript==
+// @name         Desktop User Agent
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  Changes user agent to desktop
+// @author       You
+// @match        *://*/*
+// @grant        none
+// ==/UserScript==
 
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+(function() {
+    'use strict';
+    Object.defineProperty(navigator, 'userAgent', {
+        get: function () { return 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'; }
+    });
+})();
